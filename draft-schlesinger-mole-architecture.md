@@ -376,7 +376,7 @@ and cryptographic instantiation are specified in companion documents.
 
 ## Goals
 
-MoLE constructions provide three privacy properties.
+MoLE constructions provide four privacy properties.
 
 1. *Moderator-credential unlinkability.* A Site cannot link two valid
    Moderator-credential presentations to the same Client from the presentation
@@ -391,6 +391,12 @@ MoLE constructions provide three privacy properties.
    expected to preserve this property against adversaries that record issuance
    traffic and later gain access to a cryptographically relevant quantum
    computation.
+
+4. *Unforgeability.* For an honest anchor A, no probabilistic polynomial-time (PPT) 
+   adversary conttrolling (a set of) clients is able to obtain an endorsement 
+   under A's secret key that has not been issued by A. Similarly, for an honest 
+   moderator M, no PPT adversary controlling a set of clients and anchors is able
+   to obtain a credential under M's secret key that has not been issued by M.
 
 A successful presentation tells the Site that the Client holds a Moderator
 credential satisfying the Site's policy. It does not reveal the Client's
